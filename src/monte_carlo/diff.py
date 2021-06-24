@@ -8,7 +8,13 @@ from sympy.interactive import printing
 printing.init_printing(use_latex=True)
 import sympy as sp
 
+# x = sp.symbols('x')
+# func = sp.sin(sp.cos(sp.tan(x)))
+# rst = sp.diff(func, x)
+# print(rst)
+
 x = sp.symbols('x')
-func = sp.sin(sp.cos(sp.tan(x)))
-rst = sp.diff(func, x)
+y = sp.symbols('y')
+func = sp.Pow(sp.cos(x), y)
+rst = sp.diff(func, y)
 print(rst)
